@@ -10,7 +10,7 @@ class DashboardController {
 
     public function index() {
         if (!isset($_SESSION['user_id'])) {
-            header('Location: /NHSL_DMS/public/');
+            header('Location: /');
             exit;
         }
 

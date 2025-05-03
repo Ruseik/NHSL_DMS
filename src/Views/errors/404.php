@@ -34,7 +34,7 @@
             <div class="error-code">404</div>
             <h2 class="mb-4">Page Not Found</h2>
             <p class="text-muted mb-4">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-            <a href="/NHSL_DMS/public/" class="btn btn-primary">Go to Homepage</a>
+            <a href="/" class="btn btn-primary">Go to Homepage</a>
         </div>
     </div>
 </body>

@@ -32,19 +32,19 @@
                     </li>
                     <?php if ($_SESSION['role'] !== 'diet_clerk'): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/NHSL_DMS/public/analytics">Analytics</a>
+                        <a class="nav-link" href="/analytics">Analytics</a>
                     </li>
                     <?php endif; ?>
                     <?php if ($_SESSION['role'] === 'programmer'): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/NHSL_DMS/public/settings">Settings</a>
+                        <a class="nav-link" href="/settings">Settings</a>
                     </li>
                     <?php endif; ?>
                 </ul>
                 <div class="navbar-text text-white me-3">
                     Welcome, <?php echo htmlspecialchars($_SESSION['full_name']); ?>
                 </div>
-                <a href="/NHSL_DMS/public/auth/logout" class="btn btn-light">Logout</a>
+                <a href="/auth/logout" class="btn btn-light">Logout</a>
             </div>
         </div>
     </nav>
@@ -116,7 +116,7 @@
             const totalItemsSpan = document.getElementById('totalItems');
 
             // Load diet items
-            fetch('/NHSL_DMS/public/api/diet-items')
+            fetch('/api/diet-items')
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -193,7 +193,7 @@
                     items: cart
                 };
 
-                fetch('/NHSL_DMS/public/api/save-diet-entry', {
+                fetch('/api/save-diet-entry', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -203,12 +203,16 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
+                        alert('Diet entry saved successfully!');
                         cart = [];
                         updateCart();
-                        alert('Diet entry saved successfully!');
                     } else {
-                        alert('Error saving diet entry: ' + data.message);
+                        alert('Error: ' + data.message);
                     }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while saving the diet entry.');
                 });
             });
         });

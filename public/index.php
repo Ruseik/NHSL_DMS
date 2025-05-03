@@ -9,12 +9,11 @@ error_reporting(E_ALL);
 
 // Basic routing
 $request = $_SERVER['REQUEST_URI'];
-$basePath = '/NHSL_DMS/public';
-$request = str_replace($basePath, '', $request);
+// No need for basePath as DocumentRoot points directly to public folder
 
 // Check if user is not logged in and trying to access protected routes
 if (!isset($_SESSION['user_id']) && $request !== '/' && $request !== '' && !preg_match('/^\/auth\//', $request)) {
-    header('Location: /NHSL_DMS/public/auth/login');
+    header('Location: /auth/login');
     exit;
 }
 

@@ -30,7 +30,7 @@
                 <h2>NHSL</h2>
                 <p>Diet Management System</p>
             </div>
-            <form id="loginForm" method="post" action="/NHSL_DMS/public/auth/login">
+            <form id="loginForm" method="post" action="/auth/login">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username" required>

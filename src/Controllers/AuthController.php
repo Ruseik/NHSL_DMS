@@ -36,7 +36,7 @@ class AuthController {
         session_start();
         session_unset();
         session_destroy();
-        header('Location: /NHSL_DMS/public/');
+        header('Location: /');
         exit;
     }
 
