@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'nhsl_dms');
 define('DB_USER', 'nhsl_dms');
-define('DB_PASS', 'nhsl_dms_secure_pwd');
+define('DB_PASS', 'nhsl@123');
 
 class Database {
     private static $instance = null;
