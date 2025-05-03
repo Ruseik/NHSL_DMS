@@ -185,3 +185,6 @@ For technical issues or bug reports:
 - Daily database backups
 - Regular file system backups
 - Backup verification process
+
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/Ruseik/NHSL_DMS?utm_source=oss&utm_medium=github&utm_campaign=Ruseik%2FNHSL_DMS&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
